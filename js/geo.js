@@ -1,16 +1,3 @@
-        function createPoint(thePoint){
-            var senti;
-            if (thePoint["sentimentIndex"] > 5) {
-                senti = "Happy";
-            } else {
-                senti = "Mad";
-            }
-            var nuPoint = new Point(thePoint["x"], thePoint["y"]);
-            var nuGraphic = new Graphic(nuPoint);
-            nuGraphic.setAttributes({"XCoord": -thePoint["x"], "YCoord": thePoint["y"], "Sentiment": senti, "Factor": thePoint["factor"]});
-            graphicsLayer.add(nuGraphic);
-        }
-        
       var map;
       require([
         "esri/map", "esri/geometry/Extent", "esri/geometry/Point", "esri/graphic",
@@ -67,7 +54,18 @@
 
 
         //this is the part you'll want to convert to a loop. 
-        
+        function createPoint(thePoint){
+            var senti;
+            if (thePoint["sentimentIndex"] > 5) {
+                senti = "Happy";
+            } else {
+                senti = "Mad";
+            }
+            var nuPoint = new Point(thePoint["x"], thePoint["y"]);
+            var nuGraphic = new Graphic(nuPoint);
+            nuGraphic.setAttributes({"XCoord": -thePoint["x"], "YCoord": thePoint["y"], "Sentiment": senti, "Factor": thePoint["factor"]});
+            graphicsLayer.add(nuGraphic);
+        }        
 
         
         var sampleGeoPoint = {
