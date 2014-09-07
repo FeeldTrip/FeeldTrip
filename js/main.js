@@ -1,5 +1,6 @@
 var access,
 		city1, city2, city3, city4, city5,
+		fare1, fare2, fare3, fare4, fare5,
     fares;
 $.ajax(
     {
@@ -30,6 +31,16 @@ $.ajax(
     				$("#city3").text(city3);
     				$("#city4").text(city4);
     				$("#city5").text(city5);
+    				fare1 = fares[0].LowestFare;
+    				fare2 = fares[1].LowestFare;
+    				fare3 = fares[2].LowestFare;
+    				fare4 = fares[3].LowestFare;
+    				fare5 = fares[4].LowestFare;
+    				$("#fare1").text(fare1);
+    				$("#fare2").text(fare2);
+    				$("#fare3").text(fare3);
+    				$("#fare4").text(fare4);
+    				$("#fare5").text(fare5);
         }
     });
 
