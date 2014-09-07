@@ -1,5 +1,5 @@
 var access,
-		city1,
+		city1, city2, city3, city4, city5,
     fares;
 $.ajax(
     {
@@ -21,8 +21,15 @@ $.ajax(
             fares = response.FareInfo;
             console.log(fares.length);
     				city1 = fares[0].DestinationLocation;
+    				city2 = fares[1].DestinationLocation;
+    				city3 = fares[2].DestinationLocation;
+    				city4 = fares[3].DestinationLocation;
+    				city5 = fares[4].DestinationLocation;
     				$("#city1").text(city1);
-
+    				$("#city2").text(city2);
+    				$("#city3").text(city3);
+    				$("#city4").text(city4);
+    				$("#city5").text(city5);
         }
     });
 
