@@ -63,7 +63,6 @@ require([
         madGraphic.setAttributes({"XCoord":41,"YCoord":74,"Sentiment":"Happy", "Factor": 16});
         graphicsLayer.add(madGraphic);
 
-
         var point = new Point(-118,34);
       
         var graphic = new Graphic(pointLA);
