@@ -75,16 +75,36 @@ require([
 });
 
 //city submit
-$( "#citySubmit" ).submit(function( event ) {
-	console.log("city submitted!");
-	$(".hiddenCon").show();
-	event.preventDefault();
-	$('#citySubmit').trigger("reset");
-  // alert( "City happiness is" + {{ happiness }} + "Latitude:" + {{ latitude }} + "Longitude:" + {{ longitude }} );
+// $( "#citySubmit" ).submit(function( event ) {
+// 	console.log("city submitted!");
+// 	$(".hiddenCon").show();
+// 	event.preventDefault();
+// 	$('#citySubmit').trigger("reset");
+//   // alert( "City happiness is" + {{ happiness }} + "Latitude:" + {{ latitude }} + "Longitude:" + {{ longitude }} );
   
+// });
+
+// $(cirlcle).hover(
+// 	function() {
+//    	$( ".data" ).fadeIn( 100 );
+//   }, function() {
+//   $( ".data" ).fadeOut( 100 );
+// });
+// 	  }, function() {
+// 	  $( ".data" ).fadeOut( 100 );
+// 	});
+
+$(function() { $( "#citySubmit" ).submit(function( event ) { alert("city submitted!"); 
+	// alert( "City happiness is" + {{ happiness }} + "Latitude:" + {{ latitude }} + "Longitude:" + {{ longitude }} ); 
+	event.preventDefault(); 
+		}, function() { 
+		$.getJSON('/feeld', { 
+			lat: $('input[name = "lat"]').val(), 
+			lon: $('input[name = "lon"]').val(), 
+			happy: $('input[name = "happy"]').val() 
+		});
+	}); 
 });
-
-
 
  // // take sentiment data (sentNumber)
  // // take geolocation data (long, lat)

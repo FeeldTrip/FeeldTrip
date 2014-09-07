@@ -84,18 +84,19 @@
               <label for="yourcity">Enter your destination: </label>
               <input type="text" name="yourcity" id="exampleInputEmail1" placeholder="New York, Rome, etc."><br/>
               <button type="submit" class="btn btn-default">Submit</button>
+              <div class="hiddenCon">
+                {% if happiness %}
+                  <p>City happiness is {{ happiness }}. </br> Latitude: {{ latitude }}. Longitude: {{ longitude }}</p>
+                  {% else %}
+                  <p> Couldn't calculate happiness :(.</p>
+                {% endif %}
+              </div>
             </form>
         </div>
-        <div class="hiddenCon">
-          {% if happiness %}
-            <p>City happiness is {{ happiness }}. </br> Latitude: {{ latitude }}. Longitude: {{ longitude }}</p>
-            {% else %}
-            <p> Couldn't calculate happiness :(.</p>
-          {% endif %}
-        </div>
+        
     </div>
     <script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
     <script src="http://code.jquery.com/jquery-latest.min.js"></script>
-    <script src="https://rawgit.com/FeeldTrip/FeeldTrip/master/andy/js/test_map.js"></script>
+    <script src="http://rawgit.com/FeeldTrip/FeeldTrip/jakesBranch/js/main.js"></script>
   </body>
 </html>  
