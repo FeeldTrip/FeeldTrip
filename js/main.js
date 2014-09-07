@@ -79,6 +79,10 @@ require([
         graphicsLayer.add(graphic);
 });
 
+$("graphicsLayer2_layer: firstChild").on(hover, function() {
+	alert("Hover!");
+});
+
 //city submit
 // $( "#citySubmit" ).submit(function( event ) {
 // 	console.log("city submitted!");
