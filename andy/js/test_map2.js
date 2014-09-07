@@ -26,7 +26,7 @@ require([
   map = new Map("map", {
    // extent: new Extent({"xmin":-2460944,"ymin":-1389910,"xmax":2297115,"ymax":1643787,"spatialReference":{"wkid":102100}}),
     basemap: "gray",
-    center: [-118.4, 34.08],
+    center: [lon, lat],
     zoom: 5,
    // maxScale: 5000000,
    // minScale: 20000000
@@ -97,7 +97,7 @@ $( "#citySubmit" ).submit(function( event ) {
   event.preventDefault();
 });
 
-lat
+
 
 
 //  $( "#citySubmit" ).submit(function( event ) {
