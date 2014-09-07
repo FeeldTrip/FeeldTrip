@@ -87,7 +87,11 @@ $( "#citySubmit" ).submit(function( event ) {
   event.preventDefault();
 });
 
-
+$("#cityLinkATL").click(
+  event.preventDefault();
+  console.log("hello!");
+  window.location("http://www.travelocity.com/atlanta");
+);
 
  // // take sentiment data (sentNumber)
  // // take geolocation data (long, lat)

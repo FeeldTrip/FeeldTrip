@@ -106,6 +106,10 @@ function createHoverData(city) {
 	});
 }
 
+$("#cityLinkATL").onclick(
+  event.preventDefault();
+  window.location.assign("http://www.travelocity.com/atlanta");
+);
 
 
 // var sentNumber = X

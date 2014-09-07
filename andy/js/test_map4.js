@@ -110,7 +110,11 @@ require([
 });
 
 
-
+$("#cityLinkATL").click(
+  event.preventDefault();
+  console.log("hello!");
+  window.location.href="http://www.travelocity.com/atlanta";
+);
 
 
 
