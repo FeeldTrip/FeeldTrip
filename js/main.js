@@ -78,7 +78,7 @@ require([
 $( "#citySubmit" ).submit(function( event ) {
 	console.log("city submitted!");
 	event.preventDefault();
-	$(.hiddenCon).fadeIn( 100 );
+	$(".hiddenCon").fadeIn( 100 );
 	$('#citySubmit').trigger("reset");
   // alert( "City happiness is" + {{ happiness }} + "Latitude:" + {{ latitude }} + "Longitude:" + {{ longitude }} );
   
