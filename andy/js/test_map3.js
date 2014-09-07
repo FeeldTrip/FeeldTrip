@@ -77,27 +77,26 @@ require([
 
       function createPoint(thePoint){
             var senti;
-            if (thePoint["sentimentIndex"] > 5) {
+            if (thePoint["sentimentIndex"] > 0.25) {
                 senti = "Happy";
             } else {
                 senti = "Mad";
             }
             var nuPoint = new Point(thePoint["x"], thePoint["y"]);
             var nuGraphic = new Graphic(nuPoint);
-            nuGraphic.setAttributes({"XCoord": -thePoint["x"], "YCoord": thePoint["y"], "Sentiment": senti, "Factor": thePoint["factor"]});
+            nuGraphic.setAttributes({"XCoord": thePoint["x"], "YCoord": thePoint["y"], "Sentiment": senti, "Factor": thePoint["factor"]});
             graphicsLayer.add(nuGraphic);
       }        
 
         
         var sampleGeoPoint = {
             sentimentIndex: happy,
-            factor: 20,
+            factor: 50,
             x: lon,
             y: lat
         };
 
 
-        graphicsLayer.add(graphic);
         createPoint(sampleGeoPoint);
 
 });
