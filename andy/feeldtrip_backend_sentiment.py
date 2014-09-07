@@ -99,7 +99,7 @@ def feeld():
 	# print final
 
 	# render output html file, pass happiness value
-	return render_template('city_happiness.html', happiness = happiness, latitude = latitude, longitude = longitude)
+	return render_template('select_destination.html', happiness = happiness, latitude = latitude, longitude = longitude)
 
 # run the app
 if 	__name__ == '__main__':
