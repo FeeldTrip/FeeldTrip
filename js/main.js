@@ -43,7 +43,7 @@ require([
     //Define the size of the symbols based on the values in the factor attribute
   renderer.setProportionalSymbolInfo({
     field: "Factor",
-    minSize: 6,
+   	minSize: 6,
     maxSize: 25,
     minDataValue: 5,
     maxDataValue: 50,
@@ -63,52 +63,49 @@ require([
     $each
     var madPoint = new Point( Xcoord , YCoord );
   
-  //   var madGraphic = new Graphic(madPoint);
-  //   madGraphic.setAttributes({"XCoord":XCoord,"YCoord":YCoord,"Sentiment":Sentiment, "Factor": Factor});
-  //   graphicsLayer.add(madGraphic);
-  // }
-
-    var point = new Point(-118,34);
-  
-    var graphic = new Graphic(point);
-    graphic.setAttributes({"XCoord":118,"YCoord":34,"Sentiment":"Happy", "Factor": 25});
-    
-    graphicsLayer.add(graphic);
+    var madGraphic = new Graphic(madPoint);
+    madGraphic.setAttributes({"XCoord":XCoord,"YCoord":YCoord,"Sentiment":Sentiment, "Factor": Factor});
+    graphicsLayer.add(madGraphic);
   }
 
-  // require(["esri/map", "esri/geometry/Circle", "esri/geometry/Point"], function (Map, Circle, Point){
+    // var point = new Point(-118,34);
+  
+    // var graphic = new Graphic(point);
+    // graphic.setAttributes({"XCoord":118,"YCoord":34,"Sentiment":"Happy", "Factor": 6});
+    
+    // graphicsLayer.add(graphic);
 
-  // });
+  require(["esri/map", "esri/geometry/Circle", "esri/geometry/Point"], function (Map, Circle, Point){
 
-
-
-
-// // take sentiment data (sentNumber)
-// // take geolocation data (long, lat)
-
-// // add circle to map at location
-// // modify circle to reflect sentNumber
-
-
-// for each location(long,lat)
-// 	var sentNumber = sentNumber
-// 	add circle
-// 	 circleCSS (size, color)
-
-
-// function createHoverData(city) {
-// 	console.log("creating hover data")
-// 	.hover(
-// 	function() {
-//   	$( ".data" ).fadeIn( 100 );
-// 	  }, function() {
-// 	  $( ".data" ).fadeOut( 100 );
-// 	});
-// }
+  });
+});
 
 
 
-// var sentNumber = X
 
+ // // take sentiment data (sentNumber)
+ // // take geolocation data (long, lat)
+ 
+ // @@ -10,12 +95,18 @@
+ // 	add circle
+ // 	 circleCSS (size, color)
+ 
+$( "#greenCircle" ).hover(
+
+function createHoverData(city) {
+	console.log("creating hover data")
+	.hover(
+ 	function() {
+   	$( ".data" ).fadeIn( 100 );
+  }, function() {
+  $( ".data" ).fadeOut( 100 );
+});
+	  }, function() {
+	  $( ".data" ).fadeOut( 100 );
+	});
+}
+
+ 
+ // var sentNumber = X
 
 
