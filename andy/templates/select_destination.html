@@ -60,6 +60,11 @@
         left: 75px;
         z-index: 100;
       }
+
+      .hiddenCon {
+        display:none;
+      }
+
     </style> 
   </head>
   <body>
@@ -79,9 +84,10 @@
         </div>
         <div class="hiddenCon">
           {% if happiness %}
-          <p>City happiness is {{ happiness }}. </br> Latitude: {{ latitude }}. Longitude: {{ longitude }}</p>
-          {% else %}
-          <p> Couldn't calculate happiness :(.</p>
+            <p>City happiness is {{ happiness }}. </br> Latitude: {{ latitude }}. Longitude: {{ longitude }}</p>
+            {% else %}
+            <p> Couldn't calculate happiness :(.</p>
+          {% endif %}
         </div>
     </div>
     <script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
