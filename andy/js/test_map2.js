@@ -1,4 +1,5 @@
-ar map;
+
+var map;
 require([
   "esri/map", "esri/geometry/Extent", "esri/geometry/Point", "esri/graphic",
   "esri/layers/ArcGISTiledMapServiceLayer", "esri/layers/FeatureLayer", "esri/layers/GraphicsLayer",
