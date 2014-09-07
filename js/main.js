@@ -107,9 +107,9 @@ $.ajax(
         success: function(response) {
             fares = response.FareInfo;
             console.log(fares.length);
-            var city1 = fares[0];
         }
     });
+  var city1 = fares[0];
   }
 }
 );
