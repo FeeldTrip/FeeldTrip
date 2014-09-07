@@ -103,7 +103,7 @@ $(function() {
       lat: $('input[name = "lat"]').val(),
       lon: $('input[name = "lon"]').val(),
       happy: $('input[name = "happy"]').val()
-    })   
+    });   
   });
 });
 
