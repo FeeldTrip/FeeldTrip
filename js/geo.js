@@ -91,4 +91,6 @@
         
         graphicsLayer.add(graphic);
 
+      createPoint(sampleGeoPoint);
+
       });
