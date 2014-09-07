@@ -71,7 +71,7 @@ require([
         
         graphicsLayer.add(graphic);
 
-        var pointNY = new Point(-74,41);
+        var pointNY = new Point(-41,74);
       
         var graphic = new Graphic(point);
         graphic.setAttributes({"XCoord":-41,"YCoord":74,"Sentiment":"Happy", "Factor": 18});
