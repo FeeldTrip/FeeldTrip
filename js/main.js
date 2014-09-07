@@ -87,6 +87,7 @@ $("#map_layers > circle").on("click", function() {
 
 //sabre API stuff
 var access,
+		city1,
     fares;
 $.ajax(
     {
@@ -109,9 +110,11 @@ $.ajax(
             console.log(fares.length);
         }
     });
-
+    var city1 = fares[0].DestinationLocation
   }
 }
 );
+
+$("#city1").text(city1);
 
 
