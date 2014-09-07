@@ -100,6 +100,7 @@ def feeld():
 	# return render_template('select_destination.html', happiness = happiness, latitude = latitude, longitude = longitude)
 	return jsonify(lat = latitude, lon =  longitude, happy = happiness)
 
+@app.route('/')
 def index():
 	render_template('select_destination.html')
 

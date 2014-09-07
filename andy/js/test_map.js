@@ -93,19 +93,21 @@ alert("city submitted!");
 });
 '''
 
-$(function() {
+
   $( "#citySubmit" ).submit(function( event ) {
-  alert("city submitted!");
-  // alert( "City happiness is" + {{ happiness }} + "Latitude:" + {{ latitude }} + "Longitude:" + {{ longitude }} );
-  event.preventDefault();
-  }, function() {
-  $.getJSON('/feeld', {
-      lat: $('input[name = "lat"]').val(),
-      lon: $('input[name = "lon"]').val(),
-      happy: $('input[name = "happy"]').val()
+    alert("city submitted!");
+    // alert( "City happiness is" + {{ happiness }} + "Latitude:" + {{ latitude }} + "Longitude:" + {{ longitude }} );
+    event.preventDefault();
+  }, 
+  function() {
+    $.getJSON('/feeld', {
+      var lat = $('input[name = "lat"]').val(),
+      var lon = $('input[name = "lon"]').val(),
+      var happy = $('input[name = "happy"]').val()
     });   
   });
-});
+
+
 
 
  // // take sentiment data (sentNumber)
