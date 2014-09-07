@@ -1,6 +1,4 @@
-from flask import Flask
-from flask import render_template
-from flask import request
+from flask import Flask, jsonify, render_template, request
 
 # import plotly.plotly as py
 # from plotly.graph_objs import *
@@ -69,7 +67,7 @@ def form():
 
 # Define route of the action of the form
 # Define type of requests: POST
-@app.route('/feeld/', methods=['POST'])
+@app.route('/feeld', methods=['POST'])
 def feeld():
 	city = request.form['yourcity']
 
@@ -99,7 +97,12 @@ def feeld():
 	# print final
 
 	# render output html file, pass happiness value
-	return render_template('select_destination.html', happiness = happiness, latitude = latitude, longitude = longitude)
+	# return render_template('select_destination.html', happiness = happiness, latitude = latitude, longitude = longitude)
+	return jsonify(lat = latitude, lon =  longitude, happy = happiness)
+
+def index():
+	render_template('select_destination.html')
+
 
 # run the app
 if 	__name__ == '__main__':
