@@ -1,4 +1,15 @@
 
+function $_GET(q,s) {
+    s = s || window.location.search;
+    var re = new RegExp('&'+q+'=([^&]*)','i');
+    return (s=s.replace(/^\?/,'&').match(re)) ? s=s[1] : s='';
+}
+
+
+var lat = $_GET('lat')
+var lon = $_GET('lon')
+var happy = $_GET('happy')
+
 var map;
 require([
   "esri/map", "esri/geometry/Extent", "esri/geometry/Point", "esri/graphic",
@@ -81,27 +92,31 @@ require([
 });
 
 //city submit
-// $( "#citySubmit" ).submit(function( event ) {
-//   alert("city submitted!");
-//   // alert( "City happiness is" + {{ happiness }} + "Latitude:" + {{ latitude }} + "Longitude:" + {{ longitude }} );
-//   event.preventDefault();
-// });
+$( "#citySubmit" ).submit(function( event ) {
+  alert("city submitted!");
+  // alert( "City happiness is" + {{ happiness }} + "Latitude:" + {{ latitude }} + "Longitude:" + {{ longitude }} );
+  event.preventDefault();
+});
 
 
 
 
-  $( "#citySubmit" ).submit(function( event ) {
-    alert("city submitted!");
-    // alert( "City happiness is" + {{ happiness }} + "Latitude:" + {{ latitude }} + "Longitude:" + {{ longitude }} );
-    event.preventDefault();
-  }, 
-  function() {
-    $.getJSON('/', {
-      var lat = $('input[name = "lat"]').val(),
-      var lon = $('input[name = "lon"]').val(),
-      var happy = $('input[name = "happy"]').val()
-    });   
-  });
+//  $( "#citySubmit" ).submit(function( event ) {
+//    alert("city submitted!");
+//    // alert( "City happiness is" + {{ happiness }} + "Latitude:" + {{ latitude }} + "Longitude:" + {{ longitude }} );
+//    event.preventDefault();
+//  }, 
+//  function() {
+//    $.getJSON('/', {
+//      var lat: $('input[name = "lat"]').val(),
+//      var lon: $('input[name = "lon"]').val(),
+//      var happy: $('input[name = "happy"]').val()
+//    },
+//    function(data) {
+//      $("#result").text(data.result);
+//    });
+//    return false;   
+//  });
 
 
 

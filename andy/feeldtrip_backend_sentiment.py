@@ -9,6 +9,7 @@ import twitter
 import math
 import re
 import sys
+import json
 
 reload(sys)
 sys.setdefaultencoding('utf-8')
@@ -76,8 +77,8 @@ def feeld():
 	location = geolocator.geocode(city)
 
 
-	latitude= location.latitude
-	longitude=location.longitude
+	latitude = location.latitude
+	longitude = location.longitude
 	
 	query = "#vacation"
 	count = 100
@@ -95,11 +96,15 @@ def feeld():
 	happiness = np.mean(test)
 
 	# print final
-
 	# render output html file, pass happiness value
 	# return render_template('select_destination.html', happiness = happiness, latitude = latitude, longitude = longitude)
-	return jsonify(lat = latitude, lon =  longitude, happy = happiness)
-	render_template('select_destination.html')
+	# return jsonify(lat = latitude, lon =  longitude, happy = happiness)
+	
+	# jsonData = [{'lat' : latitude, 'lon' : longitude, 'happy' : happiness}]
+	# return jsonData
+
+	# return Response(json.dumps(jasonData),  mimetype='application/json')
+	return render_template('select_destination.html', latitude = latitude, longitude = longitude, happiness = happiness)
 
 
 # run the app
