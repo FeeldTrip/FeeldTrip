@@ -52,11 +52,11 @@ $.ajax(
     				fare3 = fares[2].LowestFare;
     				fare4 = fares[3].LowestFare;
     				fare5 = fares[4].LowestFare;
-    				var fare1 = CurrencyFormatted(fare1)
-    				var fare2 = CurrencyFormatted(fare1)
-    				var fare3 = CurrencyFormatted(fare1)
-    				var fare4 = CurrencyFormatted(fare1)
-    				var fare5 = CurrencyFormatted(fare1)
+    				var fare1 = CurrencyFormatted(fare1);
+    				var fare2 = CurrencyFormatted(fare2);
+    				var fare3 = CurrencyFormatted(fare3);
+    				var fare4 = CurrencyFormatted(fare4);
+    				var fare5 = CurrencyFormatted(fare4);
     				$("#fare1").text(fare1);
     				$("#fare2").text(fare2);
     				$("#fare3").text(fare3);
