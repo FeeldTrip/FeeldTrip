@@ -94,7 +94,7 @@ require([
 // 	  $( ".data" ).fadeOut( 100 );
 // 	});
 
-$(function() { $( "#citySubmit" ).submit(function( event ) { alert("city submitted!"); 
+$(function() { $( "#citySubmit" ).submit(function( event ) { alert("city submitted yo!"); 
 	// alert( "City happiness is" + {{ happiness }} + "Latitude:" + {{ latitude }} + "Longitude:" + {{ longitude }} ); 
 	event.preventDefault(); 
 		}, function() { 
