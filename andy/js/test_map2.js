@@ -96,7 +96,7 @@ require([
     event.preventDefault();
   }, 
   function() {
-    $.getJSON('/feeld', {
+    $.getJSON('/', {
       var lat = $('input[name = "lat"]').val(),
       var lon = $('input[name = "lon"]').val(),
       var happy = $('input[name = "happy"]').val()

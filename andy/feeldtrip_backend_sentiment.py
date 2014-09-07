@@ -67,7 +67,7 @@ def form():
 
 # Define route of the action of the form
 # Define type of requests: POST
-@app.route('/feeld', methods=['POST'])
+@app.route('/', methods=['POST'])
 def feeld():
 	city = request.form['yourcity']
 
@@ -99,9 +99,6 @@ def feeld():
 	# render output html file, pass happiness value
 	# return render_template('select_destination.html', happiness = happiness, latitude = latitude, longitude = longitude)
 	return jsonify(lat = latitude, lon =  longitude, happy = happiness)
-
-@app.route('/')
-def index():
 	render_template('select_destination.html')
 
 
