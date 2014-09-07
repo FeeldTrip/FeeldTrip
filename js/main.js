@@ -57,49 +57,20 @@ require([
   graphicsLayer.setRenderer(renderer);
 
 
-  var madPoint = new Point(-41,74);
+  var madPoint = new Point(-115,34);
       
         var madGraphic = new Graphic(madPoint);
-        madGraphic.setAttributes({"XCoord":41,"YCoord":74,"Sentiment":"Happy", "Factor": 16});
+        madGraphic.setAttributes({"XCoord":114,"YCoord":43,"Sentiment":"Mad", "Factor": 20});
         graphicsLayer.add(madGraphic);
+
 
         var point = new Point(-118,34);
       
-        var graphic = new Graphic(pointLA);
-        graphic.setAttributes({"XCoord":-118,"YCoord":34,"Sentiment":"Happy", "Factor": 20});
+        var graphic = new Graphic(point);
+        graphic.setAttributes({"XCoord":118,"YCoord":34,"Sentiment":"Happy", "Factor": 6});
         
         graphicsLayer.add(graphic);
-
-        var point = new Point(-74,41);
-      
-        var graphic = new Graphic(pointNY);
-        graphic.setAttributes({"XCoord":-41,"YCoord":74,"Sentiment":"Happy", "Factor": 18});
-        
-        graphicsLayer.add(graphic);
-
- // function createPoint(thePoint){
- //       var senti;
- //        if (thePoint["sentimentIndex"] > 5) {
- //            senti = "Happy";
- //        } else {
- //            senti = "Mad";
- //        }
- //        var nuPoint = new Point(thePoint["x"], thePoint["y"]);
- //        var nuGraphic = new Graphic(nuPoint);
- //        nuGraphic.setAttributes({"XCoord": -thePoint["x"], "YCoord": thePoint["y"], "Sentiment": senti, "Factor": thePoint["factor"]});
- //        graphicsLayer.add(nuGraphic);
- //    		}    
- //  createPoint(sampleGeoPoint);{
-	// 	var sampleGeoPoint = {
- //     		sentimentIndex: 2,
- //    		factor: 20,
- //    		x: 120,
- //    		y: 46
-	// 		};
-	// 	}   
 });
-
-
 
 //city submit
 // $( "#citySubmit" ).submit(function( event ) {
