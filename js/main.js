@@ -60,14 +60,14 @@ require([
   var madPoint = new Point(-115,34);
       
         var madGraphic = new Graphic(madPoint);
-        madGraphic.setAttributes({"XCoord":114,"YCoord":43,"Sentiment":"Mad", "Factor": 20});
+        madGraphic.setAttributes({"XCoord":41,"YCoord":74,"Sentiment":"Happy", "Factor": 16});
         graphicsLayer.add(madGraphic);
 
 
         var point = new Point(-118,34);
       
         var graphic = new Graphic(point);
-        graphic.setAttributes({"XCoord":118,"YCoord":34,"Sentiment":"Happy", "Factor": 6});
+        graphic.setAttributes({"XCoord":118,"YCoord":34,"Sentiment":"Happy", "Factor": 20});
         
         graphicsLayer.add(graphic);
 
@@ -85,7 +85,7 @@ require([
     		}        
 
        var sampleGeoPoint = {
-       		sentimentIndex: 20,
+       		sentimentIndex: 2,
       		factor: 20,
       		x: 120,
       		y: 46
