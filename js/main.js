@@ -57,11 +57,11 @@ require([
   graphicsLayer.setRenderer(renderer);
 
 
-  // var madPoint = new Point(-41,74);
+  var madPoint = new Point(-41,74);
       
-  //       var madGraphic = new Graphic(madPoint);
-  //       madGraphic.setAttributes({"XCoord":41,"YCoord":74,"Sentiment":"Happy", "Factor": 16});
-  //       graphicsLayer.add(madGraphic);
+        var madGraphic = new Graphic(madPoint);
+        madGraphic.setAttributes({"XCoord":41,"YCoord":74,"Sentiment":"Happy", "Factor": 16});
+        graphicsLayer.add(madGraphic);
 
 
         var pointLA = new Point(-118,34);
