@@ -79,7 +79,7 @@ require([
         graphicsLayer.add(graphic);
 });
 
-$("#graphicsLayer2_layer").on("click", function() {
+$("#map_layers > circle").on("click", function() {
 	alert("clicked!");
 });
 
