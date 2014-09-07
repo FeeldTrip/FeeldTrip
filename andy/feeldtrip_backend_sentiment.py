@@ -2,8 +2,8 @@ from flask import Flask
 from flask import render_template
 from flask import request
 
-import plotly.plotly as py
-from plotly.graph_objs import *
+# import plotly.plotly as py
+# from plotly.graph_objs import *
 
 from geopy import geocoders
 from geopy.geocoders import Nominatim
@@ -37,7 +37,7 @@ twitter_api = twitter.Twitter(auth=auth)
 
 
 #### SENTIMENT ANALYSIS ####
-filenameAFINN = '/Users/ucsf/Documents/Disrupt_Hackathon/FeeldTrip/AFINN-111.txt'
+filenameAFINN = '/Users/jakedouglas/development/FeeldTrip/andy/AFINN-111.txt'
 afinn = dict(map(lambda (w, s): (w, int(s)), [ ws.strip().split('\t') for ws in open(filenameAFINN) ]))
 
 pattern_split = re.compile(r"\W+")
