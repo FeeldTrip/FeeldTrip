@@ -68,13 +68,13 @@ require([
   //   graphicsLayer.add(madGraphic);
   // }
 
-    var point = new Point(118,-34);
+    var point = new Point(-118,34);
   
     var graphic = new Graphic(point);
     graphic.setAttributes({"XCoord":118,"YCoord":34,"Sentiment":"Happy", "Factor": 25});
     
     graphicsLayer.add(graphic);
-  }
+  
 
   // require(["esri/map", "esri/geometry/Circle", "esri/geometry/Point"], function (Map, Circle, Point){
 
