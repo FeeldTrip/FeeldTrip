@@ -13,8 +13,11 @@ var scriptParam = document.getElementById('geohappiness');
 
 var lat = scriptParam.getAttribute('lat');
 var lon = scriptParam.getAttribute('lon');
-var lon = scriptParam.getAttribute('happy');
+var happy = scriptParam.getAttribute('happy');
 
+lat = parseFloat(lat);
+lon = parseFloat(lon);
+happy = parseFloat(happy);
 
 var map;
 require([
