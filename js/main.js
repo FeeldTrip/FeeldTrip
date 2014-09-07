@@ -107,12 +107,13 @@ $.ajax(
         success: function(response) {
             fares = response.FareInfo;
             console.log(fares.length);
-            var city1 = fares[0];
         }
     });
 
   }
 }
 );
+
+$("#city1Name").html(fares[0].DestinationLocation)
 
 
