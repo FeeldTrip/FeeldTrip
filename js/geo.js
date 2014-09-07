@@ -54,7 +54,27 @@
 
 
         //this is the part you'll want to convert to a loop. 
-
+        
+        function createPoint(thePoint){
+            var senti;
+            if (sentimentIndex > 5) {
+                senti = "Happy";
+            } else {
+                senti = "Mad";
+            }
+            var nuPoint = new Point(thePoint["x"], thePoint["y"]);
+            var nuGraphic = new Graphic(nuPoint);
+            nuGraphic.setAttributes({"XCoord": -thePoint["x"], "YCoord": thePoint["y"], "Sentiment": senti, "Factor": thePoint["factor"]});
+            graphicsLayer.add(nuGraphic);
+        }
+        
+        var sampleGeoPoint = {
+            sentimentIndex: 1,
+            factor: 20,
+            x: -110,
+            y: 40
+        };
+        
         var madPoint = new Point(-115,34);
       
         var madGraphic = new Graphic(madPoint);
