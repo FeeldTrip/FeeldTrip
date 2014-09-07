@@ -97,15 +97,15 @@ require([
 // 	 circleCSS (size, color)
 
 
-function createHoverData(city) {
-	console.log("creating hover data")
-	.hover(
-	function() {
-  	$( ".data" ).fadeIn( 100 );
-	  }, function() {
-	  $( ".data" ).fadeOut( 100 );
-	});
-}
+// function createHoverData(city) {
+// 	console.log("creating hover data")
+// 	.hover(
+// 	function() {
+//   	$( ".data" ).fadeIn( 100 );
+// 	  }, function() {
+// 	  $( ".data" ).fadeOut( 100 );
+// 	});
+// }
 
 
 
