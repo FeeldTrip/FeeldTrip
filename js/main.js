@@ -114,6 +114,4 @@ $.ajax(
 }
 );
 
-$("#city1Name").html(fares[0].DestinationLocation)
-
 
