@@ -22,11 +22,11 @@ $.ajax(
             console.log(fares.length);
         }
     });
-    city1 = fares[0].DestinationLocation
   }
 }
 );
 
+var city1 = fares[0].DestinationLocation
 $("#city1").text(city1);
 
 
