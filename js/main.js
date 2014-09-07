@@ -57,21 +57,23 @@ require([
   graphicsLayer.setRenderer(renderer);
 
 
-  var madPoint = new Point(-115,34);
-      
-        var madGraphic = new Graphic(madPoint);
-        madGraphic.setAttributes({"XCoord":114,"YCoord":43,"Sentiment":"Mad", "Factor": 20});
-        graphicsLayer.add(madGraphic);
-
-
-        var point = new Point(-118,34);
-      
-        var graphic = new Graphic(point);
-        graphic.setAttributes({"XCoord":118,"YCoord":34,"Sentiment":"Happy", "Factor": 6});
-        
-        graphicsLayer.add(graphic);
-
-  // });
+  function createPoint(thePoint){
+     var senti;
+      if (thePoint["sentimentIndex"] > 5) {
+          senti = "Happy";
+      } else {
+          senti = "Mad";
+      }
+      var nuPoint = new Point(thePoint["x"], thePoint["y"]);
+      var nuGraphic = new Graphic(nuPoint);
+      nuGraphic.setAttributes({"XCoord": -thePoint["x"], "YCoord": thePoint["y"], "Sentiment": senti, "Factor": thePoint["factor"]});
+      graphicsLayer.add(nuGraphic);
+  }        
+			var sampleGeoPoint = {
+				sentimentIndex: 1,
+        factor: 20,
+        x: -110,
+        y: 40
 });
 
 //city submit
@@ -94,18 +96,18 @@ require([
 // 	  $( ".data" ).fadeOut( 100 );
 // 	});
 
-$(function() { $( "#citySubmit" ).submit(function( event ) { 
-	alert("city submitted yo!"); 
-	// alert( "City happiness is" + {{ happiness }} + "Latitude:" + {{ latitude }} + "Longitude:" + {{ longitude }} ); 
-	event.preventDefault(); 
-		}, function() { 
-		$.getJSON('/feeld', { 
-			lat: $('input[name = "lat"]').val(), 
-			lon: $('input[name = "lon"]').val(), 
-			happy: $('input[name = "happy"]').val() 
-		});
-	}); 
-});
+// $(function() { $( "#citySubmit" ).submit(function( event ) { 
+// 	alert("city submitted yo!"); 
+// 	// alert( "City happiness is" + {{ happiness }} + "Latitude:" + {{ latitude }} + "Longitude:" + {{ longitude }} ); 
+// 	event.preventDefault(); 
+// 		}, function() { 
+// 		$.getJSON('/feeld', { 
+// 			lat: $('input[name = "lat"]').val(), 
+// 			lon: $('input[name = "lon"]').val(), 
+// 			happy: $('input[name = "happy"]').val() 
+// 		});
+// 	}); 
+// });
 
  // // take sentiment data (sentNumber)
  // // take geolocation data (long, lat)
