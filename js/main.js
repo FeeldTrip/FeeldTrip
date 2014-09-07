@@ -79,8 +79,8 @@ require([
         graphicsLayer.add(graphic);
 });
 
-$("graphicsLayer2_layer circle").on("hover", function() {
-	alert("Hover!");
+$("graphicsLayer2_layer circle").on("click", function() {
+	alert("clicked!");
 });
 
 //city submit
