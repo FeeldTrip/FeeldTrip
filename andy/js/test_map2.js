@@ -1,13 +1,20 @@
 
-function $_GET(q,s) {
-    s = s || window.location.search;
-    var re = new RegExp('&'+q+'=([^&]*)','i');
-    return (s=s.replace(/^\?/,'&').match(re)) ? s=s[1] : s='';
-}
+//function $_GET(q,s) {
+//    s = s || window.location.search;
+//    var re = new RegExp('&'+q+'=([^&]*)','i');
+//    return (s=s.replace(/^\?/,'&').match(re)) ? s=s[1] : s='';
+//}//
 
-var lat = $_GET('lat')
-var lon = $_GET('lon')
-var happy = $_GET('happy')
+//var lat = $_GET('lat')
+//var lon = $_GET('lon')
+//var happy = $_GET('happy')
+
+var scriptParam = document.getElementById('geohappiness');
+
+var lat = scriptParam.getAttribute('lat');
+var lon = scriptParam.getAttribute('lon');
+var lon = scriptParam.getAttribute('happy');
+
 
 var map;
 require([
