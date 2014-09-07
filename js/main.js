@@ -59,14 +59,14 @@ require([
 
   //this is the part you'll want to convert to a loop. 
 
-  function createCircles (XCoord, YCoord, Factor) {
-    $each
-    var madPoint = new Point( Xcoord , YCoord );
+  // function createCircles (XCoord, YCoord, Factor) {
+  //   $each
+  //   var madPoint = new Point( Xcoord , YCoord );
   
-    var madGraphic = new Graphic(madPoint);
-    madGraphic.setAttributes({"XCoord":XCoord,"YCoord":YCoord,"Sentiment":Sentiment, "Factor": Factor});
-    graphicsLayer.add(madGraphic);
-  }
+  //   var madGraphic = new Graphic(madPoint);
+  //   madGraphic.setAttributes({"XCoord":XCoord,"YCoord":YCoord,"Sentiment":Sentiment, "Factor": Factor});
+  //   graphicsLayer.add(madGraphic);
+  // }
 
     // var point = new Point(-118,34);
   
@@ -75,9 +75,9 @@ require([
     
     // graphicsLayer.add(graphic);
 
-  require(["esri/map", "esri/geometry/Circle", "esri/geometry/Point"], function (Map, Circle, Point){
+  // require(["esri/map", "esri/geometry/Circle", "esri/geometry/Point"], function (Map, Circle, Point){
 
-  });
+  // });
 });
 
 
@@ -90,20 +90,20 @@ require([
  // 	add circle
  // 	 circleCSS (size, color)
  
-$( "#greenCircle" ).hover(
+// $( "#greenCircle" ).hover(
 
-function createHoverData(city) {
-	console.log("creating hover data")
-	.hover(
- 	function() {
-   	$( ".data" ).fadeIn( 100 );
-  }, function() {
-  $( ".data" ).fadeOut( 100 );
-});
-	  }, function() {
-	  $( ".data" ).fadeOut( 100 );
-	});
-}
+// function createHoverData(city) {
+// 	console.log("creating hover data")
+// 	.hover(
+//  	function() {
+//    	$( ".data" ).fadeIn( 100 );
+//   }, function() {
+//   $( ".data" ).fadeOut( 100 );
+// });
+// 	  }, function() {
+// 	  $( ".data" ).fadeOut( 100 );
+// 	});
+// }
 
  
  // var sentNumber = X
