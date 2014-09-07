@@ -57,10 +57,10 @@ require([
   graphicsLayer.setRenderer(renderer);
 
 
-  var madPoint = new Point(-74,41);
+  var madPoint = new Point(lat,lon);
       
         var madGraphic = new Graphic(madPoint);
-        madGraphic.setAttributes({"XCoord":-74,"YCoord":41,"Sentiment":"Happy", "Factor": 20});
+        madGraphic.setAttributes({"XCoord":lat,"YCoord":lon,"Sentiment":"Happy", "Factor": 20});
         graphicsLayer.add(madGraphic);
 
 
@@ -107,6 +107,7 @@ $.ajax(
         success: function(response) {
             fares = response.FareInfo;
             console.log(fares.length);
+            var city1 = fares[0];
         }
     });
   }
