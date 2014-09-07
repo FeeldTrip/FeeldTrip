@@ -74,7 +74,7 @@ require([
     graphic.setAttributes({"XCoord":118,"YCoord":34,"Sentiment":"Happy", "Factor": 25});
     
     graphicsLayer.add(graphic);
-  
+  }
 
   // require(["esri/map", "esri/geometry/Circle", "esri/geometry/Point"], function (Map, Circle, Point){
 
