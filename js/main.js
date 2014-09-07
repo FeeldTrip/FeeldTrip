@@ -85,10 +85,10 @@ require([
     		}        
 
        var sampleGeoPoint = {
-       		sentimentIndex: 1,
+       		sentimentIndex: 20,
       		factor: 20,
-      		x: -110,
-      		y: 40
+      		x: 120,
+      		y: 46
   			};
 });
 
