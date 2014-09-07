@@ -98,12 +98,12 @@ $(function() { $( "#citySubmit" ).submit(function( event ) {
 	alert("city submitted yo!"); 
 	// alert( "City happiness is" + {{ happiness }} + "Latitude:" + {{ latitude }} + "Longitude:" + {{ longitude }} ); 
 	event.preventDefault(); 
-		// }, function() { 
-		// $.getJSON('/feeld', { 
-		// 	lat: $('input[name = "lat"]').val(), 
-		// 	lon: $('input[name = "lon"]').val(), 
-		// 	happy: $('input[name = "happy"]').val() 
-		// });
+		}, function() { 
+		$.getJSON('/feeld', { 
+			lat: $('input[name = "lat"]').val(), 
+			lon: $('input[name = "lon"]').val(), 
+			happy: $('input[name = "happy"]').val() 
+		});
 	}); 
 });
 
