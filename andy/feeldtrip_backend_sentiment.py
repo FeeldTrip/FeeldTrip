@@ -104,7 +104,7 @@ def feeld():
 	# return jsonData
 
 	# return Response(json.dumps(jasonData),  mimetype='application/json')
-	return render_template('select_destination.html', latitude = latitude, longitude = longitude, happiness = happiness)
+	return render_template('select_destination.html',  latitude = latitude, longitude = longitude, happiness = happiness )
 
 
 # run the app

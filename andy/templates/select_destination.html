@@ -63,6 +63,11 @@
     </style> 
   </head>
   <body>
+  <form method="post" action="{{ url_for('feeld') }}">
+        <label for="yourcity">Please enter your destination:</label>
+        <input type="text" name="yourcity" /><br/>
+        <input type="submit" />
+  </form>
     <div id="map">
       <!-- <div class="logoCon"> -->
       <img class="homeLogo" src="https://rawgit.com/FeeldTrip/FeeldTrip/master/images/travelHappyLogo.png">
@@ -70,6 +75,7 @@
           New York City 
           <p>Very Happy</p>
         </div>
+        <!--
         <div class="form-group">
             <form role="form" id="citySubmit" method="post" action="{{ url_for('feeld') }}">
               <label for="yourcity">Enter your destination: </label>
@@ -77,10 +83,11 @@
               <button type="submit" class="btn btn-default">Submit</button>
             </form>
         </div>
+        -->
      <!--  </div> -->
     </div>
     <script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
     <script src="http://code.jquery.com/jquery-latest.min.js"></script>
-    <script src="https://rawgit.com/FeeldTrip/FeeldTrip/master/js/main.js" lat = {{ latitude }} lon = {{ longitude }} happy = {{ happiness }}></script>
+    <script src="https://rawgit.com/FeeldTrip/FeeldTrip/master/andy/js/test_map2.js" lat = {{ latitude }} lon = {{ longitude }} happy = {{ happiness }}></script>
   </body>
 </html>  
