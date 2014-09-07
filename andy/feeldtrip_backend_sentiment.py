@@ -69,7 +69,7 @@ def form():
 
 # Define route of the action of the form
 # Define type of requests: POST
-@app.route('/feeld/', methods=['POST'])
+@app.route('/', methods=['POST'])
 def feeld():
 	city = request.form['yourcity']
 
