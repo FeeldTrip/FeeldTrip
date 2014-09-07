@@ -74,7 +74,7 @@ require([
         factor: 20,
         x: -110,
         y: 40
-});
+}
 
 //city submit
 // $( "#citySubmit" ).submit(function( event ) {
