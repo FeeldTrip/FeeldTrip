@@ -20,12 +20,15 @@ $.ajax(
         success: function(response) {
             fares = response.FareInfo;
             console.log(fares.length);
+    				city1 = fares[0].DestinationLocation;
+    				$("#city1").text(city1);
+
         }
     });
+
   }
 }
 );
 
-$("#city1").text(fares[0].DestinationLocation);
 
 
