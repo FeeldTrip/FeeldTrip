@@ -63,21 +63,22 @@ require([
     $each
     var madPoint = new Point( Xcoord , YCoord );
   
-    var madGraphic = new Graphic(madPoint);
-    madGraphic.setAttributes({"XCoord":XCoord,"YCoord":YCoord,"Sentiment":Sentiment, "Factor": Factor});
-    graphicsLayer.add(madGraphic);
+  //   var madGraphic = new Graphic(madPoint);
+  //   madGraphic.setAttributes({"XCoord":XCoord,"YCoord":YCoord,"Sentiment":Sentiment, "Factor": Factor});
+  //   graphicsLayer.add(madGraphic);
+  // }
+
+    var point = new Point(-118,34);
+  
+    var graphic = new Graphic(point);
+    graphic.setAttributes({"XCoord":118,"YCoord":34,"Sentiment":"Happy", "Factor": 25});
+    
+    graphicsLayer.add(graphic);
   }
 
-    // var point = new Point(-118,34);
-  
-    // var graphic = new Graphic(point);
-    // graphic.setAttributes({"XCoord":118,"YCoord":34,"Sentiment":"Happy", "Factor": 6});
-    
-    // graphicsLayer.add(graphic);
+  // require(["esri/map", "esri/geometry/Circle", "esri/geometry/Point"], function (Map, Circle, Point){
 
-  require(["esri/map", "esri/geometry/Circle", "esri/geometry/Point"], function (Map, Circle, Point){
-
-  });
+  // });
 });
 
 
