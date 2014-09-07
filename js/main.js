@@ -79,7 +79,7 @@ require([
         graphicsLayer.add(graphic);
 });
 
-$("graphicsLayer2_layer circle").on(hover, function() {
+$("graphicsLayer2_layer circle").on("hover", function() {
 	alert("Hover!");
 });
 
