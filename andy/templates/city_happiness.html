@@ -1,0 +1,18 @@
+<!doctype html>
+<html>
+	<head>
+		<title>Estimate city happiness according to Tweets</title>
+	</head>
+
+	<body>
+	
+	{% if happiness %}
+	<p>City happiness: {{ happiness }}. </p>br> Latitude: {{ latitude }}. Longitude: {{ longitude }}</p>
+	{% else %}
+	<p> Couldn't calculate happiness :(.</p>
+	{% endif %}
+
+	</body>
+
+
+</html>
