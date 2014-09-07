@@ -77,68 +77,40 @@ require([
         graphic.setAttributes({"XCoord":-74,"YCoord":41,"Sentiment":"Happy", "Factor": 18});
         
         graphicsLayer.add(graphic);
+
 });
 
 $("#map_layers > circle").on("click", function() {
 	alert("clicked!");
 });
 
-//city submit
-// $( "#citySubmit" ).submit(function( event ) {
-// 	console.log("city submitted!");
-// 	$(".hiddenCon").show();
-// 	event.preventDefault();
-// 	$('#citySubmit').trigger("reset");
-//   // alert( "City happiness is" + {{ happiness }} + "Latitude:" + {{ latitude }} + "Longitude:" + {{ longitude }} );
-  
-// });
 
-// $(cirlcle).hover(
-// 	function() {
-//    	$( ".data" ).fadeIn( 100 );
-//   }, function() {
-//   $( ".data" ).fadeOut( 100 );
-// });
-// 	  }, function() {
-// 	  $( ".data" ).fadeOut( 100 );
-// 	});
-
-// $(function() { $( "#citySubmit" ).submit(function( event ) { 
-// 	alert("city submitted yo!"); 
-// 	// alert( "City happiness is" + {{ happiness }} + "Latitude:" + {{ latitude }} + "Longitude:" + {{ longitude }} ); 
-// 	event.preventDefault(); 
-// 		}, function() { 
-// 		$.getJSON('/feeld', { 
-// 			lat: $('input[name = "lat"]').val(), 
-// 			lon: $('input[name = "lon"]').val(), 
-// 			happy: $('input[name = "happy"]').val() 
-// 		});
-// 	}); 
-// });
-
- // // take sentiment data (sentNumber)
- // // take geolocation data (long, lat)
- 
- // @@ -10,12 +95,18 @@
- // 	add circle
- // 	 circleCSS (size, color)
- 
-// $( "#greenCircle" ).hover(
-
-// function createHoverData(city) {
-// 	console.log("creating hover data")
-// 	.hover(
-//  	function() {
-//    	$( ".data" ).fadeIn( 100 );
-//   }, function() {
-//   $( ".data" ).fadeOut( 100 );
-// });
-// 	  }, function() {
-// 	  $( ".data" ).fadeOut( 100 );
-// 	});
-// }
-
- 
- // var sentNumber = X
+//sabre API stuff
+var access,
+    fares;
+$.ajax(
+    {
+    type: 'POST',
+    url: 'https://api.test.sabre.com/v1/auth/token',
+    beforeSend : function( xhr ) {
+    xhr.setRequestHeader( "Authorization", "Basic " + "VmpFNk5UWTFjbTEwYW5GdmRIZHhaV0V3WnpwRVJWWkRSVTVVUlZJNlJWaFU6ZERobFNUWnVVa0k9" );
+    },
+    data: { grant_type:'client_credentials' },
+    success: function( response ) {
+    access = response.access_token;
+    $.ajax({
+        type: 'GET',
+        url: 'https://api.test.sabre.com/v1/shop/flights/fares?origin=sfo&lengthofstay=6&theme=BEACH&pointofsalecountry=US',
+        beforeSend : function( xhr ) {
+            xhr.setRequestHeader( "Authorization", "BEARER " + access );
+        },
+        success: function(response) {
+            fares = response.FareInfo;
+            console.log(fares.length);
+        }
+    });
+  }
+}
+);
 
 
