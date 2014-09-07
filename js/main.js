@@ -82,7 +82,7 @@ require([
 
 //city submit
 $( "#citySubmit" ).submit(function( event ) {
-	alert ("city submitted!");
+	alert("city submitted!");
   // alert( "City happiness is" + {{ happiness }} + "Latitude:" + {{ latitude }} + "Longitude:" + {{ longitude }} );
   event.preventDefault();
 });
