@@ -105,6 +105,8 @@ require([
 //   // alert( "City happiness is" + {{ happiness }} + "Latitude:" + {{ latitude }} + "Longitude:" + {{ longitude }} );
 //   event.preventDefault();
 // });
+
+
 });
 
 
