@@ -82,15 +82,18 @@ require([
         var nuGraphic = new Graphic(nuPoint);
         nuGraphic.setAttributes({"XCoord": -thePoint["x"], "YCoord": thePoint["y"], "Sentiment": senti, "Factor": thePoint["factor"]});
         graphicsLayer.add(nuGraphic);
-    		}        
-
-       var sampleGeoPoint = {
-       		sentimentIndex: 2,
-      		factor: 20,
-      		x: 120,
-      		y: 46
-  			};
+    		}    
+  createPoint(sampleGeoPoint);{
+		var sampleGeoPoint = {
+     		sentimentIndex: 2,
+    		factor: 20,
+    		x: 120,
+    		y: 46
+			};
+		}   
 });
+
+
 
 //city submit
 // $( "#citySubmit" ).submit(function( event ) {
