@@ -75,18 +75,31 @@ require([
   //apply the symbols to the layer 
   graphicsLayer.setRenderer(renderer);
 
+      function createPoint(thePoint){
+            var senti;
+            if (thePoint["sentimentIndex"] > 5) {
+                senti = "Happy";
+            } else {
+                senti = "Mad";
+            }
+            var nuPoint = new Point(thePoint["x"], thePoint["y"]);
+            var nuGraphic = new Graphic(nuPoint);
+            nuGraphic.setAttributes({"XCoord": -thePoint["x"], "YCoord": thePoint["y"], "Sentiment": senti, "Factor": thePoint["factor"]});
+            graphicsLayer.add(nuGraphic);
+      }        
 
-  function createCircles (XCoord, YCoord, Factor) {
-    $each
-    var madPoint = new Point( lat , lon );
-  
-    var madGraphic = new Graphic(madPoint);
-    madGraphic.setAttributes({"XCoord":lat,"YCoord":lon,"Sentiment":happy, "Factor": Factor});
-    graphicsLayer.add(madGraphic);
-  }
+        
+        var sampleGeoPoint = {
+            sentimentIndex: happy,
+            factor: 20,
+            x: lon,
+            y: lat
+        };
 
 
-  });
+        graphicsLayer.add(graphic);
+        createPoint(sampleGeoPoint);
+
 });
 
 //city submit
