@@ -71,6 +71,13 @@ require([
         
         graphicsLayer.add(graphic);
 
+        var point2 = new Point(-41,74);
+      
+        var graphic = new Graphic(point);
+        graphic.setAttributes({"XCoord":-41,"YCoord":74,"Sentiment":"Happy", "Factor": 18});
+        
+        graphicsLayer.add(graphic);
+
  // function createPoint(thePoint){
  //       var senti;
  //        if (thePoint["sentimentIndex"] > 5) {
