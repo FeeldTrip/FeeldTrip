@@ -57,34 +57,30 @@ require([
   graphicsLayer.setRenderer(renderer);
 
 
-  //this is the part you'll want to convert to a loop. 
+  var madPoint = new Point(-115,34);
+      
+        var madGraphic = new Graphic(madPoint);
+        madGraphic.setAttributes({"XCoord":114,"YCoord":43,"Sentiment":"Mad", "Factor": 20});
+        graphicsLayer.add(madGraphic);
 
-  // function createCircles (XCoord, YCoord, Factor) {
-  //   $each
-  //   var madPoint = new Point( Xcoord , YCoord );
-  
-  //   var madGraphic = new Graphic(madPoint);
-  //   madGraphic.setAttributes({"XCoord":XCoord,"YCoord":YCoord,"Sentiment":Sentiment, "Factor": Factor});
-  //   graphicsLayer.add(madGraphic);
-  // }
 
-    // var point = new Point(-118,34);
-  
-    // var graphic = new Graphic(point);
-    // graphic.setAttributes({"XCoord":118,"YCoord":34,"Sentiment":"Happy", "Factor": 6});
-    
-    // graphicsLayer.add(graphic);
-
-  // require(["esri/map", "esri/geometry/Circle", "esri/geometry/Point"], function (Map, Circle, Point){
+        var point = new Point(-118,34);
+      
+        var graphic = new Graphic(point);
+        graphic.setAttributes({"XCoord":118,"YCoord":34,"Sentiment":"Happy", "Factor": 6});
+        
+        graphicsLayer.add(graphic);
 
   // });
 });
 
 //city submit
 $( "#citySubmit" ).submit(function( event ) {
-	alert("city submitted!");
+	console.log("city submitted!");
+	event.preventDefault();
+	$(.hiddenCon).fadeIn( 100 );
   // alert( "City happiness is" + {{ happiness }} + "Latitude:" + {{ latitude }} + "Longitude:" + {{ longitude }} );
-  event.preventDefault();
+  
 });
 
 
