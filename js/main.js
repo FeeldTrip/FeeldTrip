@@ -79,7 +79,6 @@ require([
   // require(["esri/map", "esri/geometry/Circle", "esri/geometry/Point"], function (Map, Circle, Point){
 
   // });
-}
 
 
 
