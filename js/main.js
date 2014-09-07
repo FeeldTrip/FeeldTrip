@@ -70,6 +70,13 @@ require([
         graphic.setAttributes({"XCoord":118,"YCoord":34,"Sentiment":"Happy", "Factor": 6});
         
         graphicsLayer.add(graphic);
+
+        var NYpoint = new Point(-74,41);
+      
+        var graphic = new Graphic(NYpoint);
+        graphic.setAttributes({"XCoord":-74,"YCoord":41,"Sentiment":"Happy", "Factor": 18});
+        
+        graphicsLayer.add(graphic);
 });
 
 //city submit
