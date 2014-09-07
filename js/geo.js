@@ -1,6 +1,6 @@
         function createPoint(thePoint){
             var senti;
-            if (sentimentIndex > 5) {
+            if (thePoint["sentimentIndex"] > 5) {
                 senti = "Happy";
             } else {
                 senti = "Mad";
