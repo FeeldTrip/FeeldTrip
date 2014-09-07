@@ -54,11 +54,23 @@
         font-size:12px;
       }
 
-      form {
+      #fareList {
         position: absolute;
-        top: 20px;
-        left: 75px;
+        bottom: 20px;
+        right: 10px;
         z-index: 100;
+        width: 320px;
+        background-color:rgb(219, 252, 255);
+        border-radius: 5px;
+        font-family: raleway;
+      }
+
+      #cities {
+        width:100px;
+      }
+
+      th {
+        font-weight: 800;
       }
 
       .hiddenCon {
@@ -79,20 +91,39 @@
           New York City 
           <p>Very Happy</p>
         </div>
-        <div class="form-group">
-            <form role="form" id="citySubmit" method="post" action="{{ url_for('feeld') }}">
-              <label for="yourcity">Enter your destination: </label>
-              <input type="text" name="yourcity" id="exampleInputEmail1" placeholder="New York, Rome, etc."><br/>
-              <button type="submit" class="btn btn-default">Submit</button>
-              <div class="hiddenCon">
-                {% if happiness %}
-                  <p>City happiness is {{ happiness }}. </br> Latitude: {{ latitude }}. Longitude: {{ longitude }}</p>
-                  {% else %}
-                  <p> Couldn't calculate happiness :(.</p>
-                {% endif %}
-              </div>
-            </form>
-        </div>
+        <table class="table table-hover table-bordered", id="fareList">
+          <tr>
+            <th id="cities">Happiest Vacation Cities</th>
+            <th>Sentiment Index</th>
+            <th>Lowest Fare (from SFO)</th>
+          </tr>
+          <tr>
+            <td>Los Angeles</td>
+            <td>4</td>
+            <td>$292.20</td>
+          </tr>
+          <tr>
+            <td>Miami</td>
+            <td>4</td>
+            <td>$505.20</td>
+          </tr>
+          <tr>
+            <td>Seattle</td>
+            <td>4</td>
+            <td>$322.80</td>
+          </tr>
+          <tr>
+            <td>Boston</td>
+            <td>4</td>
+            <td>$337.20</td>
+          </tr>
+          <tr>
+            <td>Orlando</td>
+            <td>4</td>
+            <td>$398.80</td>
+          </tr>
+          
+        </table>
         
     </div>
     <script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>

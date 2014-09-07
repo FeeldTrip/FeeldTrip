@@ -100,7 +100,7 @@ $.ajax(
     access = response.access_token;
     $.ajax({
         type: 'GET',
-        url: 'https://api.test.sabre.com/v1/shop/flights/fares?origin=sfo&lengthofstay=6&theme=BEACH&pointofsalecountry=US',
+        url: 'https://api.test.sabre.com/v1/shop/flights/fares?origin=sfo&lengthofstay=6&theme=ROMANTIC&pointofsalecountry=US',
         beforeSend : function( xhr ) {
             xhr.setRequestHeader( "Authorization", "BEARER " + access );
         },
