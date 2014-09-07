@@ -1,3 +1,19 @@
+function CurrencyFormatted(amount) {
+	var i = parseFloat(amount);
+	if(isNaN(i)) { i = 0.00; }
+	var minus = '';
+	if(i < 0) { minus = '-'; }
+	i = Math.abs(i);
+	i = parseInt((i + .005) * 100);
+	i = i / 100;
+	s = new String(i);
+	if(s.indexOf('.') < 0) { s += '.00'; }
+	if(s.indexOf('.') == (s.length - 2)) { s += '0'; }
+	s = minus + s;
+	return s;
+}
+
+
 var access,
 		city1, city2, city3, city4, city5,
 		fare1, fare2, fare3, fare4, fare5,
@@ -36,6 +52,11 @@ $.ajax(
     				fare3 = fares[2].LowestFare;
     				fare4 = fares[3].LowestFare;
     				fare5 = fares[4].LowestFare;
+    				var fare1 = CurrencyFormatted(fare1)
+    				var fare2 = CurrencyFormatted(fare1)
+    				var fare3 = CurrencyFormatted(fare1)
+    				var fare4 = CurrencyFormatted(fare1)
+    				var fare5 = CurrencyFormatted(fare1)
     				$("#fare1").text(fare1);
     				$("#fare2").text(fare2);
     				$("#fare3").text(fare3);
