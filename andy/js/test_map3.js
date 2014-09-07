@@ -44,7 +44,6 @@ require([
   
 
     var graphicsLayer = new GraphicsLayer();
-  
 
     var defaultSymbol = new SimpleMarkerSymbol().setColor(new Color("green"));
 
@@ -79,7 +78,7 @@ require([
 
   function createCircles (XCoord, YCoord, Factor) {
     $each
-    var madPoint = new Point( Xcoord , YCoord );
+    var madPoint = new Point( lat , lon );
   
     var madGraphic = new Graphic(madPoint);
     madGraphic.setAttributes({"XCoord":lat,"YCoord":lon,"Sentiment":happy, "Factor": Factor});
