@@ -36,7 +36,7 @@ twitter_api = twitter.Twitter(auth=auth)
 
 
 #### SENTIMENT ANALYSIS ####
-filenameAFINN = '/Users/ucsf/Documents/Disrupt_Hackathon/FeeldTrip/Feeldtrip/andy/AFINN-111.txt'
+filenameAFINN = '/Users/ucsf/Documents/Disrupt_Hackathon/FeeldTrip/FeeldTrip/andy/AFINN-111.txt'
 afinn = dict(map(lambda (w, s): (w, int(s)), [ ws.strip().split('\t') for ws in open(filenameAFINN) ]))
 
 pattern_split = re.compile(r"\W+")
