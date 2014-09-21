@@ -127,7 +127,7 @@ require([
       var testWordle = {
           x: lon, 
           y: lat,
-          size: 18
+          size: "18pt",
           tag: "Hello World"
       };
 
