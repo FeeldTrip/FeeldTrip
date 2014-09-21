@@ -111,6 +111,10 @@ require([
 
             var wordlePoint = new Point(theWordle["x"],theWordle["y"]);
             var wordleText = new TextSymbol("Hello!");
+            wordleText.setHorizontalAlignment("left");
+            wordleText.setVerticalAlignment("middle");
+            wordleText.setAngle(45);
+            wordleText.setSize(theWordle["size"]);
             //wordleText.Size = wordle_size;
             //wordleText.Color = wordle_color;
             var wordle = new Graphic(wordlePoint, wordleText);
@@ -120,7 +124,8 @@ require([
 
       var testWordle = {
           x: lon, 
-          y: lat
+          y: lat,
+          size: 18
       };
 
 
