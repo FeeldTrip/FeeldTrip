@@ -42,23 +42,14 @@ require([
    // minScale: 20000000
   });
   
-    var wordleTextSymbol = new TextSymbol("Hello World"); //try to add text symbol
-    // wordleTextSymbol.Color = Colors.Red;
-    wordleTextSymbol.Angle = 45;
-
-    var wordleGraphicsLayer = new GraphicsLayer();
-
-    var wordleTextRenderer = new UniqueValueRenderer(wordleTextSymbol);
+    var wordleTextSymbol = new TextSymbol(); // text symbol for wordle
+    var wordleGraphicsLayer = new GraphicsLayer(); // graphics layer for wordle
+    var wordleTextRenderer = new UniqueValueRenderer(wordleTextSymbol, "Tag", "Color", "Size"); // renderer for wordle with attributes
 
 
-
-    var graphicsLayer = new GraphicsLayer();
-
-    var defaultSymbol = new SimpleMarkerSymbol().setColor(new Color("green"));
-
-
-
-    defaultSymbol.outline.setStyle(SimpleLineSymbol.STYLE_NULL);
+    var graphicsLayer = new GraphicsLayer(); // graphics layer for point?
+    var defaultSymbol = new SimpleMarkerSymbol().setColor(new Color("green")); // symbol for point?
+    defaultSymbol.outline.setStyle(SimpleLineSymbol.STYLE_NULL); // adjusting symbol outline?
 
     //Define a renderer that sets the symbology based on the sentiment
     //This renderer expects that each point has an attribute associted with it called
@@ -83,9 +74,9 @@ require([
   //add a layer to the map that holds all the graphics 
   map.addLayer(graphicsLayer);
 
-  map.addLayer(wordleGraphicsLayer); // should add text graphic
+  map.addLayer(wordleGraphicsLayer); // for wordle, should add text graphic 
 
-  wordleGraphicsLayer.setRenderer(wordleTextRenderer);
+  wordleGraphicsLayer.setRenderer(wordleTextRenderer); // should apply text symbol to layer
 
   //apply the symbols to the layer 
   graphicsLayer.setRenderer(renderer);
@@ -111,7 +102,29 @@ require([
             y: lat
         };
 
+      
+      // analogous to createPoint function, for wordle
+      function makeWordle(theWordle){
+            var wordle_tag = "Hello";
+            var wordle_color = "red";
+            var wordle_size = "50":
 
+            var wordlePoint = new Point(theWordle["x"],theWordle["y"]);
+            //var wordleText = new TextSymbol(wordle_tag);
+            //wordleText.Size = wordle_size;
+            //wordleText.Color = wordle_color;
+            var wordle = new Graphic(wordlePoint, wordleText);
+            wordleGraphicsLayer.add(wordle);
+
+      }
+
+      var testWordle = {
+          x: lon,
+          y: lat
+      };
+
+
+        makeWordle(testWordle);
         createPoint(sampleGeoPoint);
 
 //city submit
