@@ -110,9 +110,9 @@ require([
             var wordle_size = "50":
 
             var wordlePoint = new Point(theWordle["x"],theWordle["y"]);
-            //var wordleText = new TextSymbol(wordle_tag);
-            //wordleText.Size = wordle_size;
-            //wordleText.Color = wordle_color;
+            var wordleText = new TextSymbol(wordle_tag);
+            wordleText.Size = wordle_size;
+            wordleText.Color = wordle_color;
             var wordle = new Graphic(wordlePoint, wordleText);
             wordleGraphicsLayer.add(wordle);
 
