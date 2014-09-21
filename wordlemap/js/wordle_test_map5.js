@@ -43,8 +43,8 @@ require([
   });
   
     var wordleTextSymbol = new TextSymbol("Hello World"); //try to add text symbol
-    textSymbol.Color = Colors.Red;
-    textSymbol.Angle = 45;
+    wordleTextSymbol.Color = Colors.Red;
+    wordleTextSymbol.Angle = 45;
 
     var wordleGraphicsLayer = new GraphicsLayer();
 
