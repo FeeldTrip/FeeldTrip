@@ -36,7 +36,7 @@ twitter_api = twitter.Twitter(auth=auth)
 
 
 #### SENTIMENT ANALYSIS ####
-filenameAFINN = '/Users/ucsf/Documents/Disrupt_Hackathon/FeeldTrip/FeeldTrip/andy/AFINN-111.txt'
+filenameAFINN = '/Users/ucsf/Documents/Disrupt_Hackathon/FeeldTrip/FeeldTrip/wordlemap/AFINN-111.txt'
 afinn = dict(map(lambda (w, s): (w, int(s)), [ ws.strip().split('\t') for ws in open(filenameAFINN) ]))
 
 pattern_split = re.compile(r"\W+")
@@ -64,7 +64,7 @@ def sentiment(text):
 # Open default URL to select destination 
 @app.route('/')
 def form():
-	return render_template('select_destination.html')
+	return render_template('wordle_select_destination.html')
 
 # Define route of the action of the form
 # Define type of requests: POST
@@ -104,7 +104,7 @@ def feeld():
 	# return jsonData
 
 	# return Response(json.dumps(jasonData),  mimetype='application/json')
-	return render_template('select_destination.html',  latitude = latitude, longitude = longitude, happiness = happiness )
+	return render_template('wordle_select_destination.html',  latitude = latitude, longitude = longitude, happiness = happiness )
 
 
 # run the app
