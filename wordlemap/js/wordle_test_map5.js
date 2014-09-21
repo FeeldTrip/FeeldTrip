@@ -119,7 +119,7 @@ require([
       }
 
       var testWordle = {
-          x: lon,
+          x: lon, 
           y: lat
       };
 
