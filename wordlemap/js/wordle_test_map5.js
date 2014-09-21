@@ -102,7 +102,7 @@ require([
             var wordleText = new TextSymbol();
             
             var wordleFont = new Font();
-            worleFont.setFamily("Arial");
+            wordleFont.setFamily("Arial");
             wordleFont.setSize(theWordle["size"]);
             
             wordleText.setText(theWordle["tag"]);
