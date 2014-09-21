@@ -44,7 +44,7 @@ require([
   
     var wordleTextSymbol = new TextSymbol(); // text symbol for wordle
     var wordleGraphicsLayer = new GraphicsLayer(); // graphics layer for wordle
-    var wordleTextRenderer = new UniqueValueRenderer(wordleTextSymbol, "Tag", "Color", "Size"); // renderer for wordle with attributes
+    // var wordleTextRenderer = new UniqueValueRenderer(wordleTextSymbol); renderer for wordle with attributes, needed?
 
 
     var graphicsLayer = new GraphicsLayer(); // graphics layer for point?
@@ -76,7 +76,7 @@ require([
 
   map.addLayer(wordleGraphicsLayer); // for wordle, should add text graphic 
 
-  wordleGraphicsLayer.setRenderer(wordleTextRenderer); // should apply text symbol to layer
+  // wordleGraphicsLayer.setRenderer(wordleTextRenderer); add renderer, should apply text symbol to layer, needed?
 
   //apply the symbols to the layer 
   graphicsLayer.setRenderer(renderer);
@@ -105,14 +105,14 @@ require([
       
       // analogous to createPoint function, for wordle
       function makeWordle(theWordle){
-            var wordle_tag = "Hello";
-            var wordle_color = "red";
-            var wordle_size = "50":
+            //var wordle_tag = "Hello";
+            //var wordle_color = "red";
+            //var wordle_size = "50":
 
             var wordlePoint = new Point(theWordle["x"],theWordle["y"]);
-            var wordleText = new TextSymbol(wordle_tag);
-            wordleText.Size = wordle_size;
-            wordleText.Color = wordle_color;
+            var wordleText = new TextSymbol("Hello!");
+            //wordleText.Size = wordle_size;
+            //wordleText.Color = wordle_color;
             var wordle = new Graphic(wordlePoint, wordleText);
             wordleGraphicsLayer.add(wordle);
 
