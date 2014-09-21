@@ -42,12 +42,21 @@ require([
    // minScale: 20000000
   });
   
+    var wordleTextSymbol = new TextSymbol("Hello World"); //try to add text symbol
+    textSymbol.Color = Colors.Red;
+    textSymbol.Angle = 45;
+
+    var wordleGraphicsLayer = new GraphicsLayer();
+
+    var wordleTextRenderer = new UniqueValueRenderer(wordleTextSymbol);
+
+
 
     var graphicsLayer = new GraphicsLayer();
 
     var defaultSymbol = new SimpleMarkerSymbol().setColor(new Color("green"));
 
-    var textSymbol = new TextSymbol("Hello World"); //try to add text symbol
+
 
     defaultSymbol.outline.setStyle(SimpleLineSymbol.STYLE_NULL);
 
@@ -60,8 +69,7 @@ require([
     renderer.addValue("Happy", new SimpleMarkerSymbol().setColor("green"));
     renderer.addValue("Mad", new SimpleMarkerSymbol().setColor("red"));
 
-    renderer.getSymbol(textSymbol); //try to add text symbol
-
+    
     //Define the size of the symbols based on the values in the factor attribute
   renderer.setProportionalSymbolInfo({
     field: "Factor",
@@ -74,6 +82,10 @@ require([
 
   //add a layer to the map that holds all the graphics 
   map.addLayer(graphicsLayer);
+
+  map.addLayer(wordleGraphicsLayer); // should add text graphic
+
+  wordleGraphicsLayer.setRenderer(wordleTextRenderer);
 
   //apply the symbols to the layer 
   graphicsLayer.setRenderer(renderer);
