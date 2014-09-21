@@ -105,16 +105,18 @@ require([
       
       // analogous to createPoint function, for wordle
       function makeWordle(theWordle){
-            //var wordle_tag = "Hello";
-            //var wordle_color = "red";
-            //var wordle_size = "50":
-
+      
             var wordlePoint = new Point(theWordle["x"],theWordle["y"]);
-            var wordleText = new TextSymbol("Hello!");
+            var wordleText = new TextSymbol();
+            
+            var wordleFont = new Font();
+            wordleFont.setSize(theWordle["size"]);
+            
+            wordleText.setText(theWordle["tag"]);
             wordleText.setHorizontalAlignment("left");
             wordleText.setVerticalAlignment("middle");
             wordleText.setAngle(45);
-            wordleText.setSize(theWordle["size"]);
+            wordleText.setFont(wordlefont);
             //wordleText.Size = wordle_size;
             //wordleText.Color = wordle_color;
             var wordle = new Graphic(wordlePoint, wordleText);
@@ -126,6 +128,7 @@ require([
           x: lon, 
           y: lat,
           size: 18
+          tag: "Hello World"
       };
 
 
