@@ -109,7 +109,7 @@ require([
             wordleText.setHorizontalAlignment("left");
             wordleText.setVerticalAlignment("middle");
             wordleText.setAngle(45);
-            wordleText.setFont(wordlefont);
+            wordleText.setFont(wordleFont);
             //wordleText.Size = wordle_size;
             //wordleText.Color = wordle_color;
             var wordle = new Graphic(wordlePoint, wordleText);
