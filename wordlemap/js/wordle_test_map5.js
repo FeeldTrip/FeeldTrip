@@ -110,6 +110,7 @@ require([
             var wordleText = new TextSymbol();
             
             var wordleFont = new Font();
+            worleFont.setFamily("Arial");
             wordleFont.setSize(theWordle["size"]);
             
             wordleText.setText(theWordle["tag"]);
@@ -128,7 +129,7 @@ require([
           x: lon, 
           y: lat,
           size: "18pt",
-          tag: "Hello World"
+          tag: "Hello World!"
       };
 
 
