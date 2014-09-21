@@ -23,13 +23,13 @@ var map;
 require([
   "esri/map", "esri/geometry/Extent", "esri/geometry/Point", "esri/graphic",
   "esri/layers/ArcGISTiledMapServiceLayer", "esri/layers/FeatureLayer", "esri/layers/GraphicsLayer",
-  "esri/InfoTemplate", "esri/renderers/DotDensityRenderer", "esri/renderers/UniqueValueRenderer", "esri/symbols/SimpleMarkerSymbol", "esri/symbols/TextSymbol", "esri/symbols/SimpleLineSymbol",
+  "esri/InfoTemplate", "esri/renderers/DotDensityRenderer", "esri/renderers/UniqueValueRenderer", "esri/symbols/SimpleMarkerSymbol", "esri/symbols/TextSymbol", "esri/symbols/Font" "esri/symbols/SimpleLineSymbol",
   "esri/renderers/ScaleDependentRenderer", "esri/dijit/Legend",
   "esri/Color", "dojo/_base/array", "dojo/dom", "dojo/domReady!"
 ], function(
   Map, Extent, Point, Graphic,
   ArcGISTiledMapServiceLayer, FeatureLayer, GraphicsLayer,
-  InfoTemplate, DotDensityRenderer,UniqueValueRenderer, SimpleMarkerSymbol, TextSymbol, SimpleLineSymbol,
+  InfoTemplate, DotDensityRenderer,UniqueValueRenderer, SimpleMarkerSymbol, TextSymbol, Font, SimpleLineSymbol,
   ScaleDependentRenderer, Legend, 
   Color, array, dom
 ) {
