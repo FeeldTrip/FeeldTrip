@@ -112,7 +112,7 @@ require([
             wordleText.setText(theWordle["tag"]);
             wordleText.setHorizontalAlignment("left");
             wordleText.setVerticalAlignment("middle");
-            wordleText.setAngle(45);
+            wordleText.setAngle(theWordle['angle']);
             wordleText.setFont(wordleFont);
             //wordleText.Size = wordle_size;
             //wordleText.Color = wordle_color;
@@ -121,15 +121,29 @@ require([
 
       }
 
-      var testWordle = {
+      for(var word in wordle_data) {
+        if(wordle_data.hasOwnProperty(word)) {
+          var oneWordle = {
+            x: lon,
+            y: lat,
+            size: word.size,
+            tag: word.tag,
+            // color: word.color
+          };
+        }
+        makeWordle(oneWordle);
+      }
+      
+      /* var testWordle = {
           x: lon, 
           y: lat,
           size: "18pt",
           tag: "Hello World!"
       };
+      */
 
 
-        makeWordle(testWordle);
+      //  makeWordle(testWordle);
         createPoint(sampleGeoPoint);
 
 //city submit
