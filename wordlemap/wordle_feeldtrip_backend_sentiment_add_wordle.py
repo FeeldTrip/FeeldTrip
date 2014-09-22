@@ -157,7 +157,7 @@ def feeld():
 	tags = make_tags(get_tag_counts(final_sentence), maxsize=120)
 	print tags
 	
-	return render_template('wordle_select_destination.html',  latitude = latitude, longitude = longitude, happiness = happiness, wordledata = tags )
+	return render_template('wordle_select_destination.html',  latitude = latitude, longitude = longitude, happiness = happiness, tags = tags )
 
 
 # run the app

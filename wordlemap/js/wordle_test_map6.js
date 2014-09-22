@@ -11,16 +11,18 @@
 
 var scriptParam = document.getElementById('geohappiness');
 
+var wordleTags = JSON.parse($("#data").html());
+
 var lat = scriptParam.getAttribute('lat');
 var lon = scriptParam.getAttribute('lon');
 var happy = scriptParam.getAttribute('happy');
 
-var wordle_data = scriptParam.getAttribute('wdata');
+
 
 lat = parseFloat(lat);
 lon = parseFloat(lon);
 happy = parseFloat(happy);
-wordle_data = JSON.parse(wordle_data);
+
 
 
 var map;
@@ -121,13 +123,13 @@ require([
 
       }
 
-      for(var word in wordle_data) {
+      for(var word in wordleTags) {
         if(wordle_data.hasOwnProperty(word)) {
           var oneWordle = {
             x: lon,
             y: lat,
             size: word.size,
-            tag: word.tag,
+            tag: word.tag
             // color: word.color
           };
         }
