@@ -10,6 +10,7 @@
 //var happy = $_GET('happy')
 
 var scriptParam = document.getElementById('geohappiness');
+var scriptParam_2 = document.getElementById('data');
 
 var wordleTags = JSON.parse($("#data").html());
 
@@ -17,6 +18,7 @@ var lat = scriptParam.getAttribute('lat');
 var lon = scriptParam.getAttribute('lon');
 var happy = scriptParam.getAttribute('happy');
 
+var wordleData = scriptParam_2.getAttribute('wordletags');
 
 
 lat = parseFloat(lat);
@@ -123,8 +125,8 @@ require([
 
       }
 
-      for(var word in wordleTags) {
-        if(wordle_data.hasOwnProperty(word)) {
+      for(var word in wordleData) {
+        if(wordleData.hasOwnProperty(word)) {
           var oneWordle = {
             x: lon,
             y: lat,
